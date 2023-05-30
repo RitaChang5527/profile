@@ -1,0 +1,235 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif TC", serif;
+}
+
+body {
+  position: relative;
+}
+.orange {
+  position: absolute;
+  top: -10vh;
+  right: 0;
+  z-index: -1;
+  width: 55vw;
+  height: 150vh;
+  opacity: 0.7;
+}
+
+header {
+  nav {
+    width: 100%;
+    background-color: #c26129;
+    ul {
+      padding: 0rem;
+      display: flex;
+      width: 40%;
+      justify-content: space-around;
+      list-style-type: none;
+      li {
+        font-size: 1.5rem;
+        a {
+          color: inherit; /* 移除超連結顏色 */
+          display: block; /* 讓 <a> 填滿 <li> */
+          font-size: 1.2rem;
+          padding: 1.2rem;
+          text-decoration: none;
+          &:hover {
+            background-color: rgba(250, 218, 170, 0.685);
+            color: rgb(255, 255, 255);
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+
+  section.left {
+    flex: 3 1 350px;
+    padding: 2rem 3rem;
+
+    h1 {
+      font-size: 4rem;
+      color: #e08958;
+    }
+
+    p {
+      font-size: 1.1rem;
+      padding: 1rem 0rem;
+      text-indent: 2em;
+    }
+  }
+
+  section.right {
+    flex: 1 1 600px;
+    position: relative;
+    img {
+      width: 20vw;
+      height: 20vw;
+      border-radius: 50%;
+      position: absolute;
+      top: 28vh;
+      right: 22vw;
+    }
+  }
+
+  section.table {
+    flex: 3 1 500px;
+    padding: 2rem 0rem 2rem 6rem;
+    table {
+      border-collapse: collapse;
+      tr {
+        border-bottom: 2px solid gray;
+        transition: all 0.3s ease;
+        td {
+          padding: 1rem;
+            ul{
+              li::marker {
+                padding: 0rem 1rem;
+                }
+              }
+        }
+        p{
+          text-indent: 2em;
+        }
+        &:hover {
+          background-color: bisque;
+        }
+      }
+    }
+  }
+  section.picture {
+    flex: 1 600px;
+    position: relative;
+    div.fish{
+      top:2rem;
+      right: 180px;
+      position: absolute;
+    }
+    div.climbing{
+      top:15rem;
+      right: 180px;
+      position: absolute;
+    }
+    div.river{
+      top:28rem;
+      right: 180px;
+      position: absolute;
+
+    }
+    
+    img {
+      width: 350px;
+    }
+    div.orangerect {
+      width: 550px;
+      height: 700px;
+      background-color: #e08958;
+      position: absolute;
+      right: 85px;
+      z-index: -1;
+    }
+  }
+
+  .line {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    height: 65%;
+    border-left: 1px solid #e08958;
+    transform: translateX(-50%);
+  }
+
+  section.QA {
+    width: 50%;
+    padding: 1.5rem 2rem 0rem;
+    div {
+      padding: 1rem 2rem 0rem;
+    }
+    ul {
+      padding: 0.4rem;
+      list-style-position: inside;
+    }
+  }
+
+  section.QA2 {
+    width: 50%;
+    padding: 1.5rem 2rem 0rem;
+    div {
+      padding: 1rem 2rem 0rem;
+    }
+    ul {
+      padding: 0.4rem;
+      list-style-position: inside;
+    }
+  }
+}
+
+footer {
+  padding: 0rem 0rem 0rem 5rem;
+  a {
+    padding: 0rem 4rem 0rem 0rem;
+    text-decoration:none;
+    img {
+      width: 60px;
+    }
+  }
+}
+.active {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1100px) {
+  .orange {
+    opacity: 0.5;
+  }
+  header {
+    nav {
+      ul {
+        flex-direction: column;
+        width: 100%;
+        li {
+          padding: 0.5rem 0rem;
+          border-bottom: 2px solid #b4b4b4;
+        }
+      }
+    }
+  }
+  main {
+    section.right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        position: static;
+        transform: none;
+        width: 55vw;
+        height: 50vw;
+      }
+    }
+
+    section.picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 40%;
+      }
+      div.orangerect {
+        display: none;
+      }
+    }
+    div.line {
+      display: none;
+    }
+  }
+  footer {
+    padding: 1rem 0rem;
+  }
+}
